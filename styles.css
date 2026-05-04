@@ -106,6 +106,30 @@ kbd {
   padding: .1em .4em;
 }
 
+/* ── Skip link — accessibilité clavier ────────────────────── */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  z-index: 9999;
+  background: var(--c-accent);
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: .88rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 /* ── Layout ───────────────────────────────────────────────── */
 .container { width: min(100%, var(--maxw)); margin-inline: auto; padding-inline: 1.5rem; }
 .container.small { max-width: 760px; }
@@ -280,6 +304,11 @@ main { padding-block: 1rem 3rem; }
 .cv-section:nth-of-type(5) { animation-delay: .24s; }
 .cv-section:nth-of-type(6) { animation-delay: .29s; }
 
+/* Respect du paramètre système "Réduire les animations" (WCAG 2.1 — 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  .cv-section { animation: none; }
+}
+
 /* ── Headings ─────────────────────────────────────────────── */
 h2 {
   font-size: clamp(.85rem, 1.8vw, 1.05rem);
@@ -298,6 +327,76 @@ h3 { font-size: .98rem; font-weight: 600; color: var(--c-text); margin-bottom: .
 
 /* ── Profil ───────────────────────────────────────────────── */
 .lead { font-size: 1rem; color: var(--c-text-mid); line-height: 1.75; max-width: 76ch; }
+
+.profil-card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 1px 6px var(--c-shadow);
+}
+
+.profil-tagline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--c-text);
+  line-height: 1.45;
+  margin-bottom: .75rem;
+}
+
+.profil-body {
+  font-size: .92rem;
+  color: var(--c-text-mid);
+  line-height: 1.7;
+  margin-bottom: 1.1rem;
+}
+
+.profil-stats {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  padding: .8rem 1rem;
+  background: var(--c-surface2);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--c-border);
+}
+
+.stat { display: flex; flex-direction: column; align-items: center; gap: .1rem; }
+.stat-value { font-size: 1.4rem; font-weight: 700; color: var(--c-accent); line-height: 1; }
+.stat-label { font-size: .72rem; color: var(--c-muted); text-transform: uppercase; letter-spacing: .05em; }
+
+.profil-traits {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .9rem;
+  font-size: .86rem;
+  color: var(--c-text-mid);
+}
+.profil-traits li {
+  display: flex;
+  align-items: center;
+  gap: .4em;
+  margin: 0;
+}
+.profil-traits svg { color: var(--c-accent); flex-shrink: 0; }
+
+/* ── Job themes ───────────────────────────────────────────── */
+.job-themes { display: flex; flex-direction: column; gap: .9rem; }
+
+.job-theme { padding-top: .6rem; }
+
+.theme-label {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  margin-bottom: .45rem;
+}
 
 /* ── Skills grid ──────────────────────────────────────────── */
 .skills-grid {
@@ -384,20 +483,6 @@ ul.chips.small li { font-size: .76rem; padding: .2rem .52rem; }
 .job-location { color: var(--c-muted); }
 .job ul { font-size: .88rem; color: var(--c-text-mid); }
 .job ul li::marker { color: var(--c-accent); }
-
-/* ── Projects ─────────────────────────────────────────────── */
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
-.project-card {
-  background: var(--c-surface);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius);
-  padding: 1.2rem 1.3rem;
-  box-shadow: 0 1px 4px var(--c-shadow);
-  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
-}
-.project-card:hover { border-color: var(--c-accent); transform: translateY(-2px); box-shadow: 0 4px 12px var(--c-shadow); }
-.project-card h3 { font-size: .93rem; color: var(--c-accent); margin-bottom: .45rem; }
-.project-card p { font-size: .86rem; color: var(--c-text-mid); margin-bottom: .75rem; line-height: 1.6; }
 
 /* ── Education ────────────────────────────────────────────── */
 .edu-list { list-style: none; padding: 0; }
@@ -498,7 +583,7 @@ ul.chips.small li { font-size: .76rem; padding: .2rem .52rem; }
 
   body { background: #fff !important; background-image: none !important; font-size: 10pt; line-height: 1.5; }
 
-  .site-nav, .ext-links, .hint, .site-footer { display: none !important; }
+  .skip-link, .site-nav, .ext-links, .hint, .site-footer { display: none !important; }
 
   .site-header {
     position: static;
@@ -534,10 +619,6 @@ ul.chips.small li { font-size: .76rem; padding: .2rem .52rem; }
   .job-meta { font-size: 8pt; }
   .job ul { font-size: 9.5pt; }
 
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
-  .project-card { padding: .65rem .8rem; border: 1px solid var(--c-border); box-shadow: none; }
-  .project-card p { font-size: 9pt; }
-
   .edu-item { grid-template-columns: 5.5rem 1fr; }
   .edu-year { font-size: 8pt; }
 
@@ -548,5 +629,8 @@ ul.chips.small li { font-size: .76rem; padding: .2rem .52rem; }
   a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 7.5pt; color: var(--c-muted); }
 
   h2, h3 { break-after: avoid; }
-  .job, .project-card, .edu-item { break-inside: avoid; }
+  .job, .edu-item { break-inside: avoid; }
+}
+.cv-section {
+  scroll-margin-top: 10rem;
 }

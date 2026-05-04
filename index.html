@@ -21,7 +21,7 @@
     "@type": "Person",
     "name": "Clément AYMOZ",
     "jobTitle": "Administrateur Systèmes & Réseaux",
-    "email": "mailto:clement.aymoz@outlook.fr",
+    "email": "clement.aymoz@outlook.fr",
     "address": { "@type": "PostalAddress", "addressLocality": "Douai", "addressCountry": "FR" },
     "url": "https://github.com/lifferman",
     "sameAs": ["https://www.linkedin.com/in/clement-aymoz","https://github.com/lifferman"]
@@ -30,8 +30,10 @@
 </head>
 <body>
 
+  <a href="#content" class="skip-link">Aller au contenu principal</a>
+
   <!-- ══════════════════ HEADER ══════════════════ -->
-  <header class="site-header" role="banner">
+  <header class="site-header">
     <div class="container header-inner">
 
       <div class="identity">
@@ -80,7 +82,6 @@
         <a href="#profil">Profil</a>
         <a href="#competences">Compétences</a>
         <a href="#experience">Expérience</a>
-        <a href="#realisations">Réalisations</a>
         <a href="#formation">Formation</a>
         <a href="#langues">Langues</a>
         <a href="#contact">Contact</a>
@@ -89,7 +90,7 @@
     </div>
   </header>
 
-  <main id="content" class="container" role="main">
+  <main id="content" class="container">
 
     <!-- ── PROFIL ── -->
     <section id="profil" aria-labelledby="h-profil" class="cv-section">
@@ -167,7 +168,9 @@
           <ul class="chips">
             <li>SCCM / ConfigMgr</li>
             <li>Endpoint Central</li>
+            <li>MobileIron (MDM iOS / iPadOS)</li>
             <li>PowerShell</li>
+            <li>Bash</li>
             <li>MDT</li>
             <li>GLPI</li>
           </ul>
@@ -178,6 +181,9 @@
           <ul class="chips">
             <li>VLAN / VPN (IPsec, SSL)</li>
             <li>Cisco — switches (IOS)</li>
+            <li>Aruba — switches &amp; WiFi (contrôleur)</li>
+            <li>RADIUS / 802.1X</li>
+            <li>Filtrage web (FortiGate)</li>
             <li>OKTA — MFA / SAML</li>
             <li>PSSI / ANSSI</li>
             <li>Tests d'intrusion</li>
@@ -195,13 +201,31 @@
         </div>
 
         <div class="skill-group">
+          <h3>Contrôle d'accès physique</h3>
+          <ul class="chips">
+            <li>AVB — ARD (administration quotidienne)</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
           <h3>Virtualisation &amp; Supervision</h3>
           <ul class="chips">
             <li>VMware vSphere</li>
             <li>Hyper-V</li>
-            <li>Supervision réseau</li>
-            <li>Zabbix</li>
+            <li>Zabbix (déployé &amp; administré)</li>
+            <li>Veeam Backup &amp; Replication</li>
+            <li>NAS / SAN (iSCSI)</li>
+            <li>Supervision salle serveur (UPS / PDU / sondes)</li>
             <li>Sauvegarde / PRA</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>Conteneurisation &amp; Open Source</h3>
+          <ul class="chips">
+            <li>Docker / Docker Compose</li>
+            <li>Portainer</li>
+            <li>Auto-hébergement de services</li>
           </ul>
         </div>
 
@@ -213,6 +237,15 @@
             <li>Power Automate</li>
             <li>Microsoft Teams</li>
             <li>UCOPIA (WiFi)</li>
+            <li>Wiki interne</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3>PKI &amp; Certificats</h3>
+          <ul class="chips">
+            <li>AD CS (Autorité de certification interne)</li>
+            <li>Certificats publics (DigiCert / Sectigo)</li>
           </ul>
         </div>
 
@@ -265,9 +298,9 @@
               <li>Déploiement d'OS et d'applications sur un parc de <strong>350 postes</strong> via <strong>Endpoint Central</strong> (gestion de parc, MDM).</li>
               <li>Automatisation des tâches d'administration (inventaire, comptes AD, reporting) via <strong>PowerShell</strong>.</li>
               <li>Déploiement du WiFi public sécurisé <strong>UCOPIA</strong> pour les accès visiteurs / usagers externes.</li>
-              <li>Support N2 quotidien auprès des agents, rédaction de procédures dans la base de connaissances <strong>GLPI</strong>.
-              </li>
+              <li>Support N2 quotidien auprès des agents, rédaction de procédures dans la base de connaissances <strong>GLPI</strong>.</li>
               <li>Supervision de l'infrastructure en production avec <strong>Zabbix</strong>.</li>
+              <li>Support technique ponctuel lors des conseils communautaires et conférences des maires (projection, microphonie, assistance élus).</li>
             </ul>
           </div>
 
@@ -278,14 +311,6 @@
               <li>Conception de tableaux de bord <strong>Power BI</strong> (modélisation, visualisations, automatisation des actualisations) pour le pilotage des directions.</li>
               <li>Déploiement et administration d'instances <strong>GLPI</strong> métier : <strong>HelpBat</strong> (service Bâtiment), <strong>HelpRH</strong> (ressources humaines), <strong>HelpDesk</strong> (support informatique) et <strong>WelcomeDesk</strong> (accueil des travailleurs étrangers).</li>
               <li>Migration de la gestion des salles de réunion vers <strong>Outlook / Exchange</strong> automatisé.</li>
-            </ul>
-          </div>
-
-          <div class="job-theme">
-            <span class="theme-label">AV &amp; Événementiel</span>
-            <ul>
-              <li>Prise en charge technique des <strong>conseils communautaires et conférences des maires</strong> : projection, microphonie, diffusion, assistance élus.</li>
-              <li>Installation de la sonorisation de <strong>LoisiParc</strong> ; support à l'ouverture du <strong>planétarium d'Orionis</strong> et première diffusion en direct d'une conférence.</li>
             </ul>
           </div>
 
@@ -324,91 +349,9 @@
       </article>
     </section>
 
-    <!-- ── RÉALISATIONS NOTABLES ── -->
-    <section id="realisations" aria-labelledby="h-realisations" class="cv-section">
-      <h2 id="h-realisations"><span class="section-num" aria-hidden="true">04</span>Réalisations notables</h2>
-      <p class="lead" style="margin-bottom:1.2rem">Projets transverses menés à bien chez Douaisis Agglo, classés par domaine.</p>
-
-      <div class="projects-grid">
-
-        <article class="project-card">
-          <h3>Refonte sécurité réseau</h3>
-          <p>Segmentation complète du SI selon les préconisations ANSSI (VLAN utilisateurs / serveurs / IoT), renouvellement et administration des pare-feux <strong>Fortinet (FortiGate)</strong>, déploiement d'un bastion <strong>Wallix</strong> en HA avec <strong>RDS Windows</strong> et mise en place du MFA OKTA.</p>
-          <ul class="chips small"><li>Fortinet</li><li>VLAN</li><li>Wallix Bastion</li><li>RDS Windows</li><li>OKTA</li><li>ANSSI</li></ul>
-        </article>
-
-        <article class="project-card">
-          <h3>Bastion Wallix — Accès sécurisé en HA</h3>
-          <p>Déploiement et administration d'un bastion <strong>Wallix</strong> en haute disponibilité (HA), couplé à un serveur <strong>RDS Windows</strong> pour la publication des applications HTTP/HTTPS. Sécurisation et traçabilité complètes des accès aux serveurs et ressources sensibles.</p>
-          <ul class="chips small"><li>Wallix Bastion</li><li>Haute disponibilité</li><li>RDS Windows</li><li>PAM</li><li>Traçabilité</li></ul>
-        </article>
-
-        <article class="project-card">
-          <h3>Audit &amp; Tests d'intrusion</h3>
-          <p>Organisation de l'audit de sécurité avec un bureau d'études externe : planification, coordination des Pen-tests, restitution des résultats (DOE), mise en œuvre des corrections.</p>
-          <ul class="chips small"><li>Pen-tests</li><li>Audit SI</li><li>DOE</li></ul>
-        </article>
-
-        <article class="project-card">
-          <h3>PSSI — Politique de Sécurité SI</h3>
-          <p>Rédaction et déploiement de la politique de sécurité des systèmes d'information de la collectivité : identification des risques, règles d'usage, procédures de gestion des incidents.</p>
-          <ul class="chips small"><li>PSSI</li><li>Gestion des risques</li><li>ANSSI</li></ul>
-        </article>
-
-        <article class="project-card">
-          <h3>Modernisation applicative — Assemblées &amp; Archéops</h3>
-          <p>Reprise et modernisation d'applications internes vieillissantes par <strong>développement assisté par IA</strong> : migration vers les dernières versions <strong>Symfony / PHP</strong> et amélioration de l'expérience utilisateur. Application <strong>Assemblées</strong> (outil de gestion à destination des élus) livrée ; application <strong>Archéops</strong> (gestion des fouilles archéologiques préventives) en cours.</p>
-          <ul class="chips small"><li>Symfony</li><li>PHP</li><li>Développement assisté par IA</li><li>UX</li></ul>
-        </article>
-
-        <article class="project-card">
-          <h3>Déploiement Power BI &amp; indicateurs</h3>
-          <p>Conception des tableaux de bord de pilotage pour plusieurs directions : modélisation des données, visualisations, automatisation des rafraîchissements via Power Automate et listes SharePoint.</p>
-          <ul class="chips small"><li>Power BI</li><li>SharePoint</li><li>Power Automate</li></ul>
-        </article>
-
-        <article class="project-card">
-          <h3>VPN IPsec inter-sites</h3>
-          <p>Mise en place d'un tunnel VPN IPsec entre Douaisis Agglo et <strong>ARKEOS</strong> (musée et parc archéologique) pour unifier la gestion AD, permettre l'accès distant aux réseaux/serveurs et rapatrier le serveur GTB (chaufferie, hydrométrie).</p>
-          <ul class="chips small"><li>VPN IPsec</li><li>Fortinet</li><li>AD DS</li></ul>
-        </article>
-
-        <article class="project-card">
-          <h3>WiFi public UCOPIA</h3>
-          <p>Déploiement de la solution UCOPIA pour fournir un accès WiFi stable, sécurisé et conforme aux exigences légales aux visiteurs et usagers externes de Douaisis Agglo.</p>
-          <ul class="chips small"><li>UCOPIA</li><li>WiFi</li><li>Sécurité réseau</li></ul>
-        </article>
-
-        <article class="project-card">
-          <h3>Portails SharePoint multi-services</h3>
-          <p>Développement de portails et applications SharePoint pour de nombreux services : extranet inter-directions, équipements culturels &amp; scientifiques, tableaux de bord Power BI, automatisation des processus internes.</p>
-          <ul class="chips small"><li>SharePoint</li><li>Microsoft 365</li><li>Power Automate</li></ul>
-        </article>
-
-        <article class="project-card">
-          <h3>Instances GLPI métier</h3>
-          <p>Déploiement et administration de quatre instances <strong>GLPI</strong> dédiées : <strong>HelpDesk</strong> (support informatique), <strong>HelpBat</strong> (service Bâtiment), <strong>HelpRH</strong> (ressources humaines) et <strong>WelcomeDesk</strong> (accueil des travailleurs étrangers).</p>
-          <ul class="chips small"><li>GLPI</li><li>Helpdesk</li><li>Gestion de parc</li><li>Workflow</li></ul>
-        </article>
-
-        <article class="project-card">
-          <h3>Soutien technique — Conseils communautaires &amp; conférences des maires</h3>
-          <p>Mission récurrente, en équipe, lors des instances politiques de Douaisis Agglo : installation collective des écrans, câblages et microphonie. Prise en charge personnelle du poste de régie — projection des documents de séance sur les écrans et pilotage de la <strong>caméra 360°</strong> pour la diffusion en direct — ainsi que le dépannage et l'assistance aux élus en séance.</p>
-          <ul class="chips small"><li>AV / Événementiel</li><li>Régie PC</li><li>Caméra 360°</li><li>Microphonie</li><li>Assistance élus</li></ul>
-        </article>
-
-        <article class="project-card">
-          <h3>Déploiement site CEDI</h3>
-          <p>Installation et mise en service complète de l'infrastructure réseau et des outils numériques pour l'ouverture d'un nouveau site, permettant le démarrage opérationnel dès le premier jour.</p>
-          <ul class="chips small"><li>LAN/WLAN</li><li>Active Directory</li><li>Déploiement poste</li></ul>
-        </article>
-
-      </div>
-    </section>
-
     <!-- ── FORMATION ── -->
     <section id="formation" aria-labelledby="h-formation" class="cv-section">
-      <h2 id="h-formation"><span class="section-num" aria-hidden="true">05</span>Formation</h2>
+      <h2 id="h-formation"><span class="section-num" aria-hidden="true">04</span>Formation</h2>
       <ul class="edu-list">
         <li class="edu-item">
           <span class="edu-year">2019 – 2020</span>
@@ -427,7 +370,7 @@
         <li class="edu-item">
           <span class="edu-year">2015 – 2017</span>
           <div>
-            <strong>Bac S — spécialité Sciences de l'Ingénieur / Sciences de l'Information et du Numérique</strong>
+            <strong>Bac S — spécialité SIN (Sciences de l'Information et du Numérique)</strong>
             <span class="edu-org">Lycée Edmond Labbé, Douai (59)</span>
           </div>
         </li>
@@ -436,7 +379,7 @@
 
     <!-- ── LANGUES ── -->
     <section id="langues" aria-labelledby="h-langues" class="cv-section">
-      <h2 id="h-langues"><span class="section-num" aria-hidden="true">06</span>Langues</h2>
+      <h2 id="h-langues"><span class="section-num" aria-hidden="true">05</span>Langues</h2>
       <ul class="edu-list">
         <li class="edu-item">
           <span class="edu-year">Anglais</span>
@@ -457,10 +400,10 @@
 
     <!-- ── CONTACT ── -->
     <section id="contact" aria-labelledby="h-contact" class="cv-section">
-      <h2 id="h-contact"><span class="section-num" aria-hidden="true">07</span>Contact</h2>
+      <h2 id="h-contact"><span class="section-num" aria-hidden="true">06</span>Contact</h2>
       <address class="contact-block">
         <p><a href="mailto:clement.aymoz&#64;outlook.fr"><span class="contact-icon" aria-hidden="true">✉</span>clement.aymoz&#64;outlook.fr</a></p>
-                <p><span class="contact-icon" aria-hidden="true">☎</span><span class="muted-text">Sur demande</span></p>
+        <p><span class="contact-icon" aria-hidden="true">☎</span><span class="muted-text">Sur demande</span></p>
         <p><span class="contact-icon" aria-hidden="true">⌖</span>Douai, Nord (59), France</p>
         <p class="contact-ext">
           <a href="https://www.linkedin.com/in/clement-aymoz" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
@@ -472,7 +415,7 @@
 
   </main>
 
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="container small footer-inner">
       <p>&copy; Clément AYMOZ &mdash; Administrateur Systèmes &amp; Réseaux</p>
       <p class="footer-note">Douai, France</p>
